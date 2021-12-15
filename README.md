@@ -7,7 +7,7 @@ A simple config for a 0.96" OLED Display used with an ESP8266 D1 Mini.
 I recently created this project to learn how to use a simple display with esphome. I use a few entities from Home Assistant to fetch the current weather as well as forecast weather.
 
 # What you will need
-- [Wemos D1](https://www.banggood.com/Geekcreit-D1-Mini-V3_0_0-WIFI-Internet-Of-Things-Development-Board-Based-ESP8266-4MB-MicroPython-Nodemcu-p-1264245.html?cur_warehouse=CN&ID=522225&rmmds=search) Mini (ESP8266) (you could use any esp8266 or esp32 board - modify the yaml code accordingly!)
+- [Wemos D1 Mini](https://www.banggood.com/Geekcreit-D1-Mini-V3_0_0-WIFI-Internet-Of-Things-Development-Board-Based-ESP8266-4MB-MicroPython-Nodemcu-p-1264245.html?cur_warehouse=CN&ID=522225&rmmds=search) (ESP8266) (you could use any esp8266 or esp32 board - modify the yaml code accordingly!)
 - A 0.96" OLED Display - I have used a [Geekcreit OLED Display from Banggood](https://www.banggood.com/Geekcreit-0_96-Inch-4Pin-Blue-Yellow-IIC-I2C-OLED-Display-Module-Geekcreit-for-Arduino-products-that-work-with-official-Arduino-boards-p-969144.html?cur_warehouse=CN&rmmds=search)
 - [Dupont connectors](https://www.banggood.com/40pcs-10cm-Female-To-Female-Jumper-Cable-Dupont-Wire-p-994059.html?cur_warehouse=CN&rmmds=search) if needed (you can actually connect the display directly to the female header on the D1 Mini!)
 - Micro USB Power Supply
@@ -42,7 +42,7 @@ By default, the state of the weather service corresponds to the current weather 
 ![weather entity](https://user-images.githubusercontent.com/14822776/146213303-7249f18f-b541-4f75-974c-10d9c841d7f2.JPG)
 
 
-The forecast high and low for the day are contained as state attributes within the weather entity in Home Assistant. I created template sensors in Home Assistant to extract these into their own entities:
+The forecast high and low for the day are contained as state attributes within the weather entity in Home Assistant. I created template sensors in Home Assistant to extract these into their own entities.
 
 Here is the code I added to my configuration.yaml to make this happen:
 
@@ -57,3 +57,5 @@ template:
           {{ states.weather.smhi_home.attributes.forecast.0.templow }}
 ```  
 These entities are then called out from the esphome yaml to fetch forecast data.
+
+Spend some time to examine your weather entity under Developer Tools --> States. If your weather entity is formatted differently or has different attributes, make changes to your template code for the sensors and try it out under Developer Tools --> Template before inserting into your configuration.yaml.

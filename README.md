@@ -16,6 +16,7 @@ I recently created this project to learn how to use a simple display with esphom
 
 - Solder pin headers onto the display as well as the D1 Mini. A tip is to solder on female headers onto the D1 Mini, so you can plug in the male headers from the display directly into the female headers of the D1 Mini.
 - Copy the yaml file as well as the font files into your esphome folder
+- Ensure your Secrets file in Esphome is up to date
 - Modify the yaml file substitutions fields according to your parameters
   - Your device name
   - Your Static IP Details. If you dont want to set a static IP, comment out this line as well as the lines for manual_ip under the wifi section!

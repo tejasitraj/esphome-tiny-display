@@ -1,6 +1,9 @@
 # esphome-tiny-display
 A simple config for a 0.96" OLED Display used with an ESP8266 D1 Mini.
 
+![20211207_213721](https://user-images.githubusercontent.com/14822776/146213201-01cb90a4-5e3d-4682-9fc0-d1a0b2bfbc08.jpg)
+
+
 I recently created this project to learn how to use a simple display with esphome. I use a few entities from Home Assistant to fetch the current weather as well as forecast weather.
 
 # What you will need
@@ -35,6 +38,9 @@ I recently created this project to learn how to use a simple display with esphom
 I use the [SMHI integration](https://www.home-assistant.io/integrations/smhi/) in Home Assistant since I live in Sweden as my default weather service. You can use whichever local weather service you have in your area.
 
 By default, the state of the weather service corresponds to the current weather condition (cloudy, clear etc.), as per the Home Assistant [weather](https://www.home-assistant.io/integrations/weather/) page.
+
+![weather entity](https://user-images.githubusercontent.com/14822776/146213303-7249f18f-b541-4f75-974c-10d9c841d7f2.JPG)
+
 
 The forecast high and low for the day are contained as state attributes within the weather entity in Home Assistant. I created template sensors in Home Assistant to extract these into their own entities:
 

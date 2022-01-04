@@ -1,7 +1,7 @@
 # esphome-tiny-display
 A simple config for a 0.96" OLED Display used with an ESP8266 D1 Mini.
 
-![20211207_213721](https://user-images.githubusercontent.com/14822776/146213201-01cb90a4-5e3d-4682-9fc0-d1a0b2bfbc08.jpg)
+![20220104_102143](https://user-images.githubusercontent.com/14822776/148037988-04984019-3352-4794-b4c5-d45863e9fa47.jpg)
 
 
 I recently created this project to learn how to use a simple display with esphome. I use a few entities from Home Assistant to fetch the current weather as well as forecast weather.
@@ -15,6 +15,7 @@ I recently created this project to learn how to use a simple display with esphom
 # How to get started
 
 - Solder pin headers onto the display as well as the D1 Mini. A tip is to solder on female headers onto the D1 Mini, so you can plug in the male headers from the display directly into the female headers of the D1 Mini.
+![20220104_102159](https://user-images.githubusercontent.com/14822776/148038098-6871cd17-0e73-4678-afc7-144d456f119e.jpg)
 - Copy the yaml file as well as the font files into your esphome folder
 - Ensure your Secrets file in Esphome is up to date
 - Modify the yaml file substitutions fields according to your parameters

@@ -1,7 +1,8 @@
 # esphome-tiny-display
 A simple config for a 0.96" OLED Display used with an ESP8266 D1 Mini.
 
-![20220104_102143](https://user-images.githubusercontent.com/14822776/148037988-04984019-3352-4794-b4c5-d45863e9fa47.jpg)
+![20220104_102143](https://user-images.githubusercontent.com/14822776/148037988-04984019-3352-4794-b4c5-d45863e9fa47.jpg)![20220110_204443](https://user-images.githubusercontent.com/14822776/148831975-dc762b1d-53c9-431e-a534-1e084da5b4df.jpg)
+
 
 
 I recently created this project to learn how to use a simple display with esphome. I use a few entities from Home Assistant to fetch the current weather as well as forecast weather.
@@ -61,3 +62,8 @@ template:
 These entities are then called out from the esphome yaml to fetch forecast data.
 
 Spend some time to examine your weather entity under Developer Tools --> States. If your weather entity is formatted differently or has different attributes, make changes to your template code for the sensors and try it out under Developer Tools --> Template before inserting into your configuration.yaml.
+
+# Case
+
+I worked with my friend Magnus Skärström to design a case for the display and D1 Mini. The case also has a hole for a 6mm push button which I plan to add soon.
+![20220110_204443](https://user-images.githubusercontent.com/14822776/148832183-4940f038-b1c8-4db9-91cf-731494d26b2d.jpg)
